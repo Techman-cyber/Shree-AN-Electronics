@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1155,16 +1156,20 @@
 <div id="chatbotModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:9999; padding:20px;">
   <div style="background:#fff; padding:20px; border-radius:8px; width:90%; max-width:500px; height:70%; display:flex; flex-direction:column; position:relative;">
     <div id="closeChat" style="position:absolute; top:10px; right:15px; font-size:1.5rem; cursor:pointer; color:#999;">&times;</div>
-    <h2 style="text-align:center;">ChatBot</h2>
-    <div id="chatbotChat" style="flex:1; overflow-y:auto; background:#f0f0f0; padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;"></div>
+    <h2 style="text-align:center; margin-bottom:5px;">Get Instant Help! 🤖</h2>
+    <p style="text-align:center; color:#666; font-size:0.9rem; margin-top:0; margin-bottom:15px;">Your 24/7 assistant for quick answers and expert guidance</p>
+    <div id="chatbotChat" style="flex:1; overflow-y:auto; background:#f0f0f0; padding:10px; border:1px solid #ccc; border-radius:8px; margin-top:10px;">
+      <div style="background:#e3f2fd; padding:10px; border-radius:8px; margin-bottom:10px; border-left:4px solid #1a56db;">
+        <strong>Bot:</strong> Contact us for our current selling prices. Please note that prices may vary and are subject to change.
+      </div>
+    </div>
     <div style="margin-top:10px; display:flex; gap:8px;">
-      <input type="text" id="userInput" placeholder="Type your message..." style="flex:1; padding:10px; border:1px solid #ccc; border-radius:4px;" />
+      <input type="text" id="userInput" placeholder="Ask me anything..." style="flex:1; padding:10px; border:1px solid #ccc; border-radius:4px;" />
       <button id="sendBtn" style="padding:10px; background:#1a56db; color:#fff; border:none; border-radius:4px;">Send</button>
       <button id="micBtn" style="padding:10px; background:#1a56db; color:#fff; border:none; border-radius:4px;">🎤</button>
     </div>
   </div>
 </div>
-
 <!-- Open Chatbot Button -->
 <button style="position:fixed;bottom:20px;right:20px; z-index:999; padding:10px 15px; border:none; border-radius:50%; background:#1a56db; color:#fff; cursor:pointer; font-size:1.2rem;" onclick="openModal('chatbotModal')">
   <i class="fas fa-robot"></i>
@@ -1336,16 +1341,7 @@ const predefinedTopics = {
       "Our car accessories include audio systems, security features, comfort items, and navigation tools."
     ]
   },
-  
-  // Pricing
-  'pricing': {
-    patterns: ['price', 'cost', 'how much', 'expensive', 'cheap', 'affordable', 'budget'],
-    responses: [
-      "We offer competitive pricing across all our products. Specific prices depend on the product - feel free to ask about any item!",
-      "Our prices are market-competitive. We have options for every budget from basic to premium products."
-    ]
-  },
-  
+    
   'warranty': {
     patterns: ['warranty', 'guarantee', 'return', 'exchange', 'refund', 'policy'],
     responses: [
@@ -1587,6 +1583,7 @@ function addQuickReplies() {
 
 // Call this when chatbot loads to show quick replies
 // addQuickReplies();
+
 </script>
 </body>
 </html>
